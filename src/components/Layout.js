@@ -1,30 +1,83 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 import CustomCursor from "./CustomCursor";
 
 export default function Layout({ children }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Scroll to top & close menu when navigating
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <CustomCursor />
+
+      {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/">
-            <h1 className="text-2xl font-bold text-primary cursor-pointer">Digi World</h1>
+          {/* Logo */}
+          <Link href="/" onClick={handleNavClick}>
+            <h1 className="text-2xl font-bold text-primary cursor-pointer">
+              Digi World
+            </h1>
           </Link>
-          <nav className="space-x-6 font-medium">
-            <Link href="/" className="hover:text-secondary">Home</Link>
-            <Link href="/about" className="hover:text-secondary">About</Link>
-            <Link href="/services" className="hover:text-secondary">Services</Link>
-            <Link href="/contact" className="hover:text-secondary">Contact</Link>
+
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex space-x-6 font-medium">
+            <Link href="/" onClick={handleNavClick} className="hover:text-secondary">
+              Home
+            </Link>
+            <Link href="/about" onClick={handleNavClick} className="hover:text-secondary">
+              About
+            </Link>
+            <Link href="/services" onClick={handleNavClick} className="hover:text-secondary">
+              Services
+            </Link>
+            <Link href="/contact" onClick={handleNavClick} className="hover:text-secondary">
+              Contact
+            </Link>
           </nav>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <nav className="md:hidden bg-white border-t shadow-md flex flex-col text-center space-y-4 py-4 font-medium">
+            <Link href="/" onClick={handleNavClick} className="hover:text-secondary">
+              Home
+            </Link>
+            <Link href="/about" onClick={handleNavClick} className="hover:text-secondary">
+              About
+            </Link>
+            <Link href="/services" onClick={handleNavClick} className="hover:text-secondary">
+              Services
+            </Link>
+            <Link href="/contact" onClick={handleNavClick} className="hover:text-secondary">
+              Contact
+            </Link>
+          </nav>
+        )}
       </header>
+
+      {/* Page Content */}
       <main>{children}</main>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12 mt-12">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-          
           {/* Contact Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Digi World</h3>
@@ -63,7 +116,7 @@ export default function Layout({ children }) {
                   Facebook
                 </span>
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M22 12c0-5.523-4.477-10-10-10s-10 4.477-10 10c0 5.008 3.657 9.163 8.438 9.879v-6.99h-2.54v-2.889h2.54v-2.203c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.876h2.773l-.443 2.889h-2.33v6.99c4.781-.716 8.438-4.871 8.438-9.879z"/>
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 5.008 3.657 9.163 8.438 9.879v-6.99h-2.54v-2.889h2.54v-2.203c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.876h2.773l-.443 2.889h-2.33v6.99C18.343 21.163 22 17.008 22 12z"/>
                 </svg>
               </a>
 
@@ -79,7 +132,7 @@ export default function Layout({ children }) {
                   Instagram
                 </span>
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.314.975.975 1.252 2.243 1.314 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.34 2.633-1.314 3.608-.975.975-2.243 1.252-3.608 1.314-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.34-3.608-1.314-.975-.975-1.252-2.243-1.314-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.34-2.633 1.314-3.608.975-.975 2.243-1.252 3.608-1.314 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.013-4.947.072-1.281.059-2.158.27-2.918.57a5.923 5.923 0 0 0-2.15 1.415A5.923 5.923 0 0 0 .572 5.697c-.3.76-.511 1.637-.57 2.918-.059 1.28-.072 1.688-.072 4.947s.013 3.667.072 4.947c.059 1.281.27 2.158.57 2.918a5.923 5.923 0 0 0 1.415 2.15 5.923 5.923 0 0 0 2.15 1.415c.76.3 1.637.511 2.918.57 1.28.059 1.688.072 4.947.072s3.667-.013 4.947-.072c1.281-.059 2.158-.27 2.918-.57a5.923 5.923 0 0 0 2.15-1.415 5.923 5.923 0 0 0 1.415-2.15c.3-.76.511-1.637.57-2.918.059-1.28.072-1.688.072-4.947s-.013-3.667-.072-4.947c-.059-1.281-.27-2.158-.57-2.918a5.923 5.923 0 0 0-1.415-2.15 5.923 5.923 0 0 0-2.15-1.415c-.76-.3-1.637-.511-2.918-.57-1.28-.059-1.688-.072-4.947-.072z"/>
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.314.975.975 1.252 2.243 1.314 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.34 2.633-1.314 3.608-.975.975-2.243 1.252-3.608 1.314-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.34-3.608-1.314-.975-.975-1.252-2.243-1.314-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.34-2.633 1.314-3.608.975-.975 2.243-1.252 3.608-1.314 1.266-.058 1.646-.07 4.85-.07z"/>
                   <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998z"/>
                   <circle cx="18.406" cy="5.594" r="1.44"/>
                 </svg>
@@ -108,8 +161,11 @@ export default function Layout({ children }) {
           </div>
         </div>
 
-        <p className="text-center mt-6 text-gray-400">&copy; {new Date().getFullYear()} Digi World. All rights reserved.</p>
+        <p className="text-center mt-6 text-gray-400">
+          &copy; {new Date().getFullYear()} Digi World. All rights reserved.
+        </p>
       </footer>
     </>
   );
 }
+  
