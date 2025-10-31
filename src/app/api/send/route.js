@@ -30,7 +30,7 @@ Phone: ${countryCode} ${phone}
 Message: ${message}
       `,
     };
-
+    
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
   } catch (error) {
