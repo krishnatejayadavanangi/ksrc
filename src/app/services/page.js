@@ -9,7 +9,7 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-black via-red-900 to-black text-white py-28 text-center overflow-hidden">
         <motion.div
-          className="absolute inset-0 bg-[url('/images/services-bg.jpg')] bg-cover bg-center opacity-40"
+          className="absolute inset-0 bg-[url('/images/services-bg.webp')] bg-cover bg-center opacity-40"
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
           transition={{ duration: 12, repeat: Infinity, repeatType: 'reverse' }}
@@ -62,7 +62,7 @@ export default function Services() {
           </div>
           <div className="md:w-1/2">
             <motion.img
-              src="/images/digital-marketing.jpg"
+              src="/images/digital-marketing.webp"
               alt="Digital Marketing"
               className="rounded-xl shadow-2xl w-full object-cover hover:scale-105 transition-transform duration-500"
               whileHover={{ scale: 1.05 }}
@@ -100,7 +100,7 @@ export default function Services() {
           </div>
           <div className="md:w-1/2">
             <motion.img
-              src="/images/web-development.jpg"
+              src="/images/web-development.webp"
               alt="Web Development"
               className="rounded-xl shadow-2xl w-full object-cover hover:scale-105 transition-transform duration-500"
               whileHover={{ scale: 1.05 }}
@@ -138,7 +138,7 @@ export default function Services() {
           </div>
           <div className="md:w-1/2">
             <motion.img
-              src="/images/app-development.jpg"
+              src="/images/app-development.webp"
               alt="App Development"
               className="rounded-xl shadow-2xl w-full object-cover hover:scale-105 transition-transform duration-500"
               whileHover={{ scale: 1.05 }}

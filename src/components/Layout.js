@@ -19,7 +19,7 @@ export default function Layout({ children }) {
           {/* Logo */}
           <Link href="/" onClick={handleNavClick}>
             <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent cursor-pointer tracking-wide">
-              Digi World
+              Ramakalpa <span className="text-white">Solutions</span>
             </h1>
           </Link>
 
@@ -75,17 +75,19 @@ export default function Layout({ children }) {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Info Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-red-500">Digi World</h3>
-            <p className="text-gray-400">123 Digital Street, City, State</p>
-            <p className="text-gray-400">📞 +91 98765 43210</p>
-            <p className="text-gray-400">✉️ info@digiworld.com</p>
+            <h3 className="text-2xl font-bold text-red-500">
+              Ramakalpa <span className="text-white">Solutions</span>
+            </h3>
+            <p className="text-gray-400">Guntur, Andhra Pradesh, India</p>
+            <p className="text-gray-400">📞 +91 86889 09985</p>
+            <p className="text-gray-400">✉️ contact@ramakalpasolutions.com</p>
 
             {/* Social Media */}
             <div className="flex space-x-6 mt-6">
               {[
-                { name: "LinkedIn", url: "https://www.linkedin.com/company/digiworld", icon: "mdi:linkedin" },
-                { name: "Facebook", url: "https://www.facebook.com/digiworld", icon: "mdi:facebook" },
-                { name: "Instagram", url: "https://www.instagram.com/digiworld", icon: "mdi:instagram" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/company/ramakalpasolutions", icon: "mdi:linkedin" },
+                { name: "Facebook", url: "https://www.facebook.com/ramakalpasolutions", icon: "mdi:facebook" },
+                { name: "Instagram", url: "https://www.instagram.com/ramakalpasolutions", icon: "mdi:instagram" },
               ].map((social) => (
                 <a
                   key={social.name}
@@ -104,8 +106,8 @@ export default function Layout({ children }) {
           {/* Map */}
           <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              title="Digi World Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019705007112!2d-122.41941568468152!3d37.77492927975862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085818c85c1e6b5%3A0x3c8b9d52d3627f26!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sin!4v1698100000000!5m2!1sen!2sin"
+              title="Ramakalpa Solutions Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.345678!2d80.4423!3d16.3067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a7528e8a7c7f7%3A0x3a2b9b19e1f1e6f!2sGuntur%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1698100000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               className="border-0 grayscale-[40%] hover:grayscale-0 transition-all duration-300"
@@ -118,7 +120,8 @@ export default function Layout({ children }) {
 
         {/* Bottom Line */}
         <div className="text-center mt-10 text-gray-500 text-sm">
-          © {new Date().getFullYear()} <span className="text-red-400 font-semibold">Digi World</span>. All rights reserved.
+          © {new Date().getFullYear()}{" "}
+          <span className="text-red-400 font-semibold">Ramakalpa Solutions</span>. All rights reserved.
         </div>
       </footer>
     </>

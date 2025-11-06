@@ -40,7 +40,7 @@ export default function Home() {
       {/* 🌆 Hero Section */}
       <section className="relative text-center bg-gradient-to-br from-black via-red-900 to-black text-white py-32 overflow-hidden">
         <motion.div
-          className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-[url('/images/hero-bg.webp')] bg-cover bg-center opacity-30"
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
           transition={{ duration: 12, repeat: Infinity, repeatType: "reverse" }}
@@ -53,7 +53,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             Grow Your Business Online with{" "}
-            <span className="text-white">Digi World</span>
+            <span className="text-white">Ramakalpa Solutions</span>
           </motion.h1>
 
           <motion.p
@@ -168,7 +168,7 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-white text-red-700 font-semibold px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transition-all duration-300"
           >
-            Contact Us
+            Contact Ramakalpa Solutions
           </motion.a>
         </div>
       </section>
