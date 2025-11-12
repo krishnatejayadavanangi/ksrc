@@ -80,7 +80,7 @@ export default function Contact() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            Contact Digi World
+            Contact ramakalpasolutions
           </motion.h2>
           <motion.p
             className="text-lg md:text-xl text-gray-300"

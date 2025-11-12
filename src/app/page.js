@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import ClientsSection from "../components/ClientsSection"; // 👈 New Section
 
 export default function Home() {
   // Service data
@@ -43,7 +44,7 @@ export default function Home() {
           className="absolute inset-0 bg-[url('/images/hero-bg.webp')] bg-cover bg-center opacity-30"
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 12, repeat: Infinity, repeatType: "reverse" }}
+          transition={{ duration: 12, repeat: Infinity, repeatType: 'reverse' }}
         />
         <div className="relative z-10 max-w-5xl mx-auto px-6">
           <motion.h1
@@ -136,13 +137,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 🤝 Our Clients Section */}
+      <ClientsSection />
+
       {/* 🌟 CTA Section */}
       <section className="relative bg-gradient-to-r from-red-700 via-red-800 to-black text-white py-20 text-center overflow-hidden">
         <motion.div
           className="absolute inset-0 bg-[url('/images/cta-bg.jpg')] bg-cover bg-center opacity-20"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+          transition={{ duration: 10, repeat: Infinity, repeatType: 'reverse' }}
         />
         <div className="relative z-10 max-w-3xl mx-auto px-6">
           <motion.h3
@@ -168,7 +172,7 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-white text-red-700 font-semibold px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transition-all duration-300"
           >
-            Contact Ramakalpa Solutions
+            Contact Us
           </motion.a>
         </div>
       </section>

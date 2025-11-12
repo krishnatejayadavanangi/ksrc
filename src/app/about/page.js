@@ -21,7 +21,7 @@ export default function About() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            About Digi World
+            About ramakalpasolutions
           </motion.h1>
           <motion.p
             className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
@@ -74,7 +74,7 @@ export default function About() {
       <section className="py-20 bg-zinc-950 text-center">
         <motion.img
           src="/images/about-us.jpg"
-          alt="About Digi World"
+          alt="About Rama Kalpa Solutions"
           className="rounded-2xl shadow-2xl mx-auto w-full md:w-3/4 lg:w-1/2 object-cover"
           whileHover={{ scale: 1.03 }}
           transition={{ type: 'spring', stiffness: 150 }}
@@ -89,7 +89,7 @@ export default function About() {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Ready to Grow with Digi World?
+          Ready to Grow with ramakalpasolutions?
         </motion.h3>
         <p className="text-gray-300 mb-8">
           Let’s turn your ideas into impactful digital experiences.

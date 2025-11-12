@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 export default function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -82,24 +83,40 @@ export default function Layout({ children }) {
             <p className="text-gray-400">📞 +91 86889 09985</p>
             <p className="text-gray-400">✉️ contact@ramakalpasolutions.com</p>
 
-            {/* Social Media */}
-            <div className="flex space-x-6 mt-6">
-              {[
-                { name: "LinkedIn", url: "https://www.linkedin.com/company/ramakalpasolutions", icon: "mdi:linkedin" },
-                { name: "Facebook", url: "https://www.facebook.com/ramakalpasolutions", icon: "mdi:facebook" },
-                { name: "Instagram", url: "https://www.instagram.com/ramakalpasolutions", icon: "mdi:instagram" },
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-red-400 transition"
-                  aria-label={social.name}
-                >
-                  <i className={`iconify text-2xl`} data-icon={social.icon}></i>
-                </a>
-              ))}
+            {/* 🌐 Social Media */}
+            <div className="flex space-x-6 mt-6 text-2xl">
+              <a
+                href="https://www.linkedin.com/company/ramakalpasolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-400 transition"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61583419231006&sk=about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-400 transition"
+              >
+                <FaFacebook />
+              </a>
+              <a
+                href="https://www.instagram.com/ramakalpasolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-400 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://wa.me/918688909985"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-green-400 transition"
+              >
+                <FaWhatsapp />
+              </a>
             </div>
           </div>
 

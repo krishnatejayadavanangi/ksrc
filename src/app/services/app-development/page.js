@@ -84,7 +84,7 @@ export default function AppDevelopment() {
           Ready to Launch Your App?
         </motion.h3>
         <p className="text-gray-300 mb-8">
-          Partner with Digi World to build your next innovative mobile product.
+          Partner with Rama Kalpa Solutions to build your next innovative mobile product.
         </p>
         <a
           href="/contact"

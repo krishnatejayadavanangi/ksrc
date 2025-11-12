@@ -27,7 +27,7 @@ export default function HeroSection() {
         className="relative z-10 text-center"
       >
         <h1 className="text-5xl md:text-7xl font-bold text-red-400 mb-6 drop-shadow-lg">
-          Grow Your Business with Digi World
+          Grow Your Business with Rama Kalpa Solutions
         </h1>
         <p className="text-gray-300 max-w-2xl mx-auto text-lg">
           Digital marketing, web, and app solutions designed to elevate your
