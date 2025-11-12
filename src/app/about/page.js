@@ -22,6 +22,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             About Ramakalpa Solutions
+
           </motion.h1>
           <motion.p
             className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
@@ -90,6 +91,7 @@ export default function About() {
   </div>
 </section>
 
+
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-black via-red-700 to-black text-center text-white">
         <motion.h3
@@ -98,7 +100,7 @@ export default function About() {
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Ready to Grow with Digi World?
+          Ready to Grow with ramakalpasolutions?
         </motion.h3>
         <p className="text-gray-300 mb-8">
           Let’s turn your ideas into impactful digital experiences.
