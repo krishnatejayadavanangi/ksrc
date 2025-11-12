@@ -112,6 +112,7 @@ export default function Layout({ children }) {
                 className="text-gray-400 hover:text-red-400 transition"
               >
                 <FaInstagram />
+                
               </a>
               <a
                 href="https://wa.me/918688909985"
