@@ -21,7 +21,8 @@ export default function About() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            About ramakalpasolutions
+            About Ramakalpa Solutions
+
           </motion.h1>
           <motion.p
             className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto"
@@ -71,15 +72,25 @@ export default function About() {
       </section>
 
       {/* Team Image Section */}
-      <section className="py-20 bg-zinc-950 text-center">
-        <motion.img
-          src="/images/about-us.jpg"
-          alt="About Rama Kalpa Solutions"
-          className="rounded-2xl shadow-2xl mx-auto w-full md:w-3/4 lg:w-1/2 object-cover"
-          whileHover={{ scale: 1.03 }}
-          transition={{ type: 'spring', stiffness: 150 }}
-        />
-      </section>
+      {/* Team Image Section */}
+<section className="py-20 bg-zinc-950 flex flex-col md:flex-row items-center justify-center gap-10 px-6">
+  <motion.img
+    src="/images/about-us.jpg"
+    alt="About Ramakalpa Solutions"
+    className="rounded-2xl shadow-2xl w-64 md:w-80 lg:w-96 object-cover"
+    whileHover={{ scale: 1.03 }}
+    transition={{ type: 'spring', stiffness: 150 }}
+  />
+
+  <div className="text-center md:text-left max-w-lg text-white">
+    <h2 className="text-3xl font-bold mb-4">About Ramakalpa Solutions</h2>
+    <p className="text-zinc-400 leading-relaxed">
+      We’re a passionate team dedicated to crafting innovative digital solutions 
+      that empower businesses to grow, adapt, and thrive in a connected world.
+    </p>
+  </div>
+</section>
+
 
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-black via-red-700 to-black text-center text-white">
