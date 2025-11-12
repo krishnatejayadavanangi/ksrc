@@ -16,12 +16,16 @@ export default function Layout({ children }) {
       {/* 🧭 Header */}
       <header className="bg-gradient-to-r from-black via-zinc-900 to-black text-white sticky top-0 z-50 shadow-lg border-b border-zinc-800 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" onClick={handleNavClick}>
-            <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent cursor-pointer tracking-wide">
-              Ramakalpa <span className="text-white">Solutions</span>
-            </h1>
-          </Link>
+         {/* Logo */}
+<Link href="/" onClick={handleNavClick}>
+  <img
+    src="/images/RK-logo.png.png"
+    alt="Ramakalpa Solutions Logo"
+    className="ml-1 h-10 md:h-13 w-auto cursor-default"
+  />
+</Link>
+
+
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8 font-medium">
